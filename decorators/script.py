@@ -1,4 +1,6 @@
 import time
+import functools
+from dataclasses import dataclass
 
 def myDecorator(function):
 
@@ -85,6 +87,32 @@ class Math:
     def multiply(x, y):
         return x * y
 
+# CLASSMETHOD
+class Person:
+    species = "HOMO sapiens"
 
-print(Math.add(5,8))
-print(Math.multiply(5,8))
+    @classmethod
+    def get_species(cls):
+        return cls.species
+    
+# functools-cache
+@functools.cache
+def fibonacci(n):
+    if n < 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+# dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+    quantity: int = 0
+
+    def total_cost(self):
+        return self.price * self.quantity
+
+ice = Product("ice cream", 12.00, 100)
+print(ice.name)
+print(ice.total_cost())
