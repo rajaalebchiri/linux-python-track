@@ -1,0 +1,2 @@
+[console_scripts]
+checklinks = checklinks.cli.__main__:app
