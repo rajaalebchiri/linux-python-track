@@ -1,0 +1,12 @@
+https://www.google.com
+https://www.wikipedia.org
+https://httpstat.us/200
+https://www.github.com
+https://httpstat.us/301
+https://httpstat.us/302
+https://httpstat.us/401
+https://httpstat.us/410
+https://httpstat.us/500
+https://httpstat.us/504
+https://httpstat.us/200?sleep=10000
+http://thisdomaindoesnotexist.tld

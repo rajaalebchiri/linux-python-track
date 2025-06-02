@@ -6,3 +6,7 @@ flake8
 isort
 mypy
 pytest-mock
+requests
+coverage
+tox
+typer

@@ -1,2 +1,5 @@
 typer
 requests
+rich
+pytest
+coverage

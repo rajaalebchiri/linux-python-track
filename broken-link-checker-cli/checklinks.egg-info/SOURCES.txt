@@ -2,7 +2,6 @@ README.md
 pyproject.toml
 checklinks/__init__.py
 checklinks/core.py
-checklinks/utils.py
 checklinks.egg-info/PKG-INFO
 checklinks.egg-info/SOURCES.txt
 checklinks.egg-info/dependency_links.txt
@@ -13,4 +12,3 @@ checklinks/cli/__init__.py
 checklinks/cli/__main__.py
 tests/test_cli.py
 tests/test_core.py
-tests/test_utils.py
