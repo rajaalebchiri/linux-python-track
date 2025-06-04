@@ -18,4 +18,6 @@ get_name() {
     echo "$1"
 }
 
-echo "My name is $(get_name john)"
+echo "My name is $(get_name john)" >> data.txt
+
+mpstat
