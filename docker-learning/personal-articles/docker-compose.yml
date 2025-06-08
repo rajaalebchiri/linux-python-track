@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: es
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+
+  web:
+    image: rajaaleb/personal-articles
+    command: python run.py
+    depends_on:
+      - es
+    ports:
+      - "5004:5004"
+    volumes:
+      - .:/opt/flask-app
+    networks:
+      - elastic
+
+volumes:
+  esdata1:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
